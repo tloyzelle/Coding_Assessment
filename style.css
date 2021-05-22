@@ -49,6 +49,7 @@ h3 {
     justify-content: center;
     align-items: center;
     max-width: 80rem;
+    padding: 2rem;
 }
 
 .container > * {

@@ -1,7 +1,7 @@
 .choice-container {
     display: flex;
     margin-bottom: 0.5rem;
-    width: 100%;
+    width: 75%;
     font-size: 1.8rem;
     border: 0.1rem solid rgb(166, 166, 221);
     background-color: white;
@@ -10,7 +10,7 @@
 
 .choice-container:hover {
     cursor: pointer;
-    background-color: rgb(241, 228, 202)
+    color:darkblue
 }
 
 .choice-prefix {
@@ -21,4 +21,29 @@
 
 .choice-text {
     padding: 1.5rem;
+    width: 100%;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color:orangered;
+}
+
+/* hud */
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align:center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
 }
