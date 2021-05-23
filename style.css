@@ -1,6 +1,6 @@
 :root {
     background-color: aliceblue;
-    font-size: 4vh;
+    font-size: 2vh;
 }
 
 * {
@@ -19,7 +19,7 @@ h4 {
 }
 
 h1 {
-    font-size: 5.4rem;
+    font-size: 3rem;
     color: midnightblue;
     margin-bottom: 5rem;
 }
@@ -80,9 +80,9 @@ h3 {
 
 /*buttons*/
 .btn {
-    font-size: 1.8rem;
+    font-size: 1rem;
     padding: 1rem 0;
-    width: 20rem;
+    width: 7rem;
     text-align: center;
     border: 0.1rem solid midnightblue;
     margin-bottom: 1rem;
@@ -94,9 +94,29 @@ h3 {
 
 .btn:hover {
     cursor: pointer;
-    background-color: rgb(241, 228, 202);
+    color:black;
 }
 
 .btn[disabled]:hover {
     cursor: not-allowed;
+}
+
+/*form*/
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 10rem;
+    padding: 1.5rem;
+    font-size: 1rem;
+    border: none;
+}
+
+input::placeholder {
+    color:darkblue;
 }

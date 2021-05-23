@@ -1,14 +1,16 @@
+//variables
 var question = document.getElementById("question");
 var choices = Array.from(document.getElementsByClassName("choice-text"));
 var questionCounterText = document.getElementById("questionCounter");
 var scoreText = document.getElementById("score");
 
+//let
 let currentQuestion = {}
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-
+//questions
 let questions = [
     {
         question: "Commonly used data typoes do NOT include ______.",
@@ -53,7 +55,7 @@ let questions = [
 ]
 
 ///constants
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = 25;
 const MAX_QUESTIONS = 5;
 
 startGame = () => {
@@ -67,7 +69,9 @@ startGame = () => {
 getNewQuestion = () => {
 
     if(availableQuestions.length ===0 || questionCounter >= MAX_QUESTIONS) {
-        return window.location.assign("/end.html");
+        localStorage.setItem("mostRecentScore", score);
+        //goes to end page
+        return window.location.assign("end.html");
     };
 
     questionCounter++ ;
@@ -111,7 +115,7 @@ choices.forEach(choice => {
         }, 1000);
     });
 });
-
+//adding to score
 incrementScore = num => {
     score += num;
     scoreText.innerText = score;
