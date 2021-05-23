@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="game.css" />
 </head>
 <body>
+    <!--Game Pages-->
     <div class="container">
         <div id="game" class="justify-content flex-column">
+                <div class="timer">
+                    <h2 id="countdown"></h2>
+                </div>
             <div id="hud-item">
                 <p class = "hud-prefix">
                     Question
@@ -17,6 +21,7 @@
                     1/5
                 </h1>
             </div>
+            
             <div id="hud-item">
                 <p class = "hud-prefix">
                     Score
@@ -25,6 +30,7 @@
                     0
                 </h1>
             </div>
+            <!--Questions Layout-->
             <h2 id="question">What is the answer to this question?</h2>
             <div class="choice-container">
                 <p class="choice-prefix">A</p>
@@ -44,6 +50,7 @@
             </div>
         </div>
     </div> 
+    <!--Script-->
     <script src="game.js"></script>
 </body>
 </html>

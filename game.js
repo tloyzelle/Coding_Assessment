@@ -4,6 +4,33 @@ var choices = Array.from(document.getElementsByClassName("choice-text"));
 var questionCounterText = document.getElementById("questionCounter");
 var scoreText = document.getElementById("score");
 
+
+//timer
+var timerEl = document.getElementById("countdown");
+
+function countdown() {
+    var timeLeft = 75;
+    var timeInterval = setInterval(function () {
+
+    if (timeLeft > 1) {
+      timerEl.textContent = timeLeft + ' seconds remaining';
+      timeLeft--;
+    } else if (timeLeft === 1) {
+      timerEl.textContent = timeLeft + ' second remaining';
+      timeLeft--;
+    } else {
+      timerEl.textContent = ''; 
+      clearInterval(timeInterval);
+      displayMessage();
+    }
+  }, 1000);
+};
+
+function displayMessage() {
+    timerEl.textContent = "Times Up!!"
+    return window.location.assign("end.html");
+};
+
 //let
 let currentQuestion = {}
 let acceptingAnswers = false;
@@ -121,4 +148,5 @@ incrementScore = num => {
     scoreText.innerText = score;
 };
 
+countdown();
 startGame();
