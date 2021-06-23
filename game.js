@@ -117,7 +117,7 @@ getNewQuestion = () => {
 
     acceptingAnswers = true;
 };
-
+//choices
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         console.log(e.target);
