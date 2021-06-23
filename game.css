@@ -27,17 +27,18 @@
     padding: 1.5rem;
     width: 100%;
 }
+
 /*correct answers*/
 .correct {
     background-color: green;
 }
+
 /*incorrect answers*/
 .incorrect {
     background-color:orangered;
 }
 
 /* hud */
-
 #hud {
     display: flex;
     justify-content: space-between;

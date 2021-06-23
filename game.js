@@ -37,6 +37,7 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+
 //questions
 let questions = [
     {
@@ -117,6 +118,7 @@ getNewQuestion = () => {
 
     acceptingAnswers = true;
 };
+
 //choices
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
@@ -142,6 +144,7 @@ choices.forEach(choice => {
         }, 1000);
     });
 });
+
 //adding to score
 incrementScore = num => {
     score += num;
